@@ -1,8 +1,9 @@
 import React from "react";
+import cls from "./App.module.scss"
 
 function App() {
   return (
-    <div>
+    <div className={cls.App}>
 
     </div>
   );
