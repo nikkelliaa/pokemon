@@ -1,12 +1,13 @@
 import React from "react";
-import cls from "./App.module.scss"
+import Register from './features/register/Register'
+import s from '../src/App.js'
 
 // i'ts basik branch
 
 function App() {
   return (
-    <div className={cls.App}>
-
+    <div className={s.App}>
+  <Register />
     </div>
   );
 }
