@@ -43,29 +43,54 @@ const Register = () => {
     }
 
     return (
+        <div className={cls.register_container}>
             <div className={cls.register_container}>
                 <h2>Войти в учётную запись Клуба Тренеров Покемонов</h2>
                 {errorMessage && <p className={cls.error}>{errorMessage}</p>}
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <label htmlFor="username">Имя пользователя</label>
                         <input type="text"
                                id="username"
                                value={username}
                                onChange={(e) => setUsername(e.target.value)}
-                               required/>
+                               placeholder="Имя пользователя"
+                               required
+                               style={{
+                                   background: '#544a4a',
+                                   width: '300px',
+                                   height: '40px',
+                                   border: 'none',
+                                   borderRadius: '7px',
+                                   margin: '8px'
+                               }}
+                        />
                     </div>
                     <div>
-                        <label htmlFor="password">Пароль</label>
                         <input type="password"
                                id="password"
                                value={password}
                                onChange={(e) => setPassword(e.target.value)}
-                               required/>
+                               placeholder="Пароль"
+                               required
+                               style={{
+                                   background: '#544a4a',
+                                   width: '300px',
+                                   height: '40px',
+                                   borderRadius: '7px',
+                                   border: 'none',
+                                   marginBottom: '50px'
+                               }}
+                        />
                     </div>
-                    <button type={handleSubmit}>Вход</button>
+                    <button type={handleSubmit} className={cls.submit}>Вход</button>
+                    <div>
+                        <p>Нет учетной записи?</p>
+                        <button className={cls.button}>Создай учетную запись</button>
+                    </div>
                 </form>
             </div>
+
+        </div>
 
     );
 

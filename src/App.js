@@ -20,7 +20,6 @@ const App = () => {
     return (
         <div className={cls.App}>
             <Router>
-
                 <Header />
                 <Layout>
                 <Routes>
