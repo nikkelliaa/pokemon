@@ -43,29 +43,30 @@ const Register = () => {
     }
 
     return (
-        <div className={cls.register_container}>
-            <h2>Войти в учётную запись Клуба Тренеров Покемонов</h2>
-            {errorMessage && <p className={cls.error}>{errorMessage}</p>}
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="username">Имя пользователя</label>
-                    <input type="text"
-                           id="username"
-                           value={username}
-                           onChange={(e) => setUsername(e.target.value)}
-                           required/>
-                </div>
-                <div>
-                    <label htmlFor="password">Пароль</label>
-                    <input type="password"
-                           id="password"
-                           value={password}
-                           onChange={(e) => setPassword(e.target.value)}
-                           required/>
-                </div>
-                <button type={handleSubmit}>Вход</button>
-            </form>
-        </div>
+            <div className={cls.register_container}>
+                <h2>Войти в учётную запись Клуба Тренеров Покемонов</h2>
+                {errorMessage && <p className={cls.error}>{errorMessage}</p>}
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <label htmlFor="username">Имя пользователя</label>
+                        <input type="text"
+                               id="username"
+                               value={username}
+                               onChange={(e) => setUsername(e.target.value)}
+                               required/>
+                    </div>
+                    <div>
+                        <label htmlFor="password">Пароль</label>
+                        <input type="password"
+                               id="password"
+                               value={password}
+                               onChange={(e) => setPassword(e.target.value)}
+                               required/>
+                    </div>
+                    <button type={handleSubmit}>Вход</button>
+                </form>
+            </div>
+
     );
 
 }
