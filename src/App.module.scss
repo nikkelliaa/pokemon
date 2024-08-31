@@ -1,17 +1,13 @@
 * {
-  //background-image: url("./assets/container_br.png");
+  margin: 0;
+  padding: 0;
 }
+//
+//$maxWidth: 913px;
 
-$maxWidth: 913px;
 
-
-.App {
-  width: 100vw;
-  min-height: 100vh;
-  height: auto;
-
-  *{
-    box-sizing: border-box;
-
-  }
-}
+//.App {
+//  width: 100vw;
+//  min-height: 100vh;
+//  height: auto;
+//}

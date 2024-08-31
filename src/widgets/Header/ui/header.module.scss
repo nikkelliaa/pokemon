@@ -8,67 +8,109 @@
     width: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Для распределения ссылок по горизонтали */
+    justify-content: space-between;
     align-items: center;
 
-    a {
-      width: 14.30%; /* Задайте ширину каждой ссылки */
-      padding: 20px 0; /* Увеличьте отступы для улучшения кликабельности */
+    .navLink {
+      width: 14.30%;
+      padding: 20px 0;
       text-align: center;
       background-color: white;
       text-decoration: none;
       color: black;
       position: relative;
-      transition: color 0.9s ease; /* Плавное изменение цвета текста */
+      transition: color 0.3s ease;
 
       &::before {
         content: "";
-        background-color: transparent; /* Начальный цвет фона */
-        height: 3px; /* Уменьшите высоту, чтобы лучше соответствовать предыдущему стилю */
+        background-color: transparent;
+        height: 3px;
         width: 100%;
         position: absolute;
         bottom: 0;
         left: 0;
-        transition: background-color 0.3s ease, height 0.3s ease; /* Плавное изменение фона */
+        transition: background-color 0.3s ease, height 0.3s ease;
       }
 
       &:hover {
-        color: #fff; /* Цвет текста при наведении */
+        color: #fff;
       }
 
       &:hover::before {
-        height: 100%; /* Высота подчеркивания при наведении */
-        background-color: currentColor; /* Цвет фона подчеркивания соответствует цвету текста */
+        height: 100%;
+        background-color: currentColor;
       }
     }
   }
-}
 
-/* Индивидуальные фоны для каждой ссылки */
-.home::before {
-  background-color: #919191;
-}
+  .home {
+    &::before {
+      background-color: #919191;
+    }
+    &:hover::before {
+      background-color: #919191;
+    }
+  }
 
-.pokedex::before {
-  background-color: #e2350d;
-}
+  .pokedex {
+    &::before {
+      background-color: #e2350d;
+    }
+    &:hover::before {
+      background-color: #e2350d;
+    }
+  }
 
-.games::before {
-  background-color: #ed6b2f;
-}
+  .games {
+    &::before {
+      background-color: #ed6b2f;
+    }
+    &:hover::before {
+      background-color: #ed6b2f;
+    }
+  }
 
-.animation::before {
-  background-color: #4ead5b;
-}
+  .animation {
+    &::before {
+      background-color: #4ead5b;
+    }
+    &:hover::before {
+      background-color: #4ead5b;
+    }
+  }
 
-.news::before {
-  background-color: #1c53ba;
-}
+  .news {
+    &::before {
+      background-color: #1c53ba;
+    }
+    &:hover::before {
+      background-color: #1c53ba;
+    }
+  }
 
-.events::before {
-  background-color: #31a7d7;
-}
+  .events {
+    &::before {
+      background-color: #31a7d7;
+    }
+    &:hover::before {
+      background-color: #31a7d7;
+    }
+  }
 
-.cards::before {
-  background-color: #e5bc2e;
+  .cards {
+    &::before {
+      background-color: #e5bc2e;
+    }
+    &:hover::before {
+      background-color: #e5bc2e;
+    }
+  }
+
+  .active {
+    color: white;
+    &::before {
+      background-color: currentColor; /* Цвет текущей активной ссылки */
+      height: 100%; /* Полное заполнение цветом */
+    }
+  }
 }
